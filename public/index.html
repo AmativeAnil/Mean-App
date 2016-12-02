@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="productsApp" ng-controller="mainCtrl">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="css/mainStyle.css" rel="stylesheet">
+   
+  </head>
+
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top navbar-custom" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#/" id="logo">Flowers App</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="collapse1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#/" id="about">About</a>
+                    </li>
+                    <li>
+                        <a href="#/" id="service">Services</a>
+                    </li>
+                    <li>
+                        <a href="#/" id="works">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#/" id="order">OrderNow</a>
+                    </li>
+                    <li>
+                        <a href="#/" id="contact">contactUs</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#/cart"><i class="fa fa-cart-plus" aria-hidden="true"></i>{{cartData.length}}- Items in Cart</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+      
+    <!-- Dynamically render templates -->
+    <div ng-view></div>
+      
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <hr>
+                <div class="col-md-7">
+                    <p>© Copyright 2016. Profile Templete. Design by Anil BT</p>
+                </div>
+                <div class="col-md-5">
+                    <div class=" social pull-right">
+                        <a href="javascript:;">
+                        <i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                        <a href="javascript:;">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        <a href="javascript:;">
+                        <i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+       <!-- jQuery -->
+        <script src="js/core/jquery.min.js"></script>
+      
+      <!-- Bootstrap Core JavaScript -->
+        <script src="js/core/bootstrap.min.js"></script>
+      
+      <!-- Angular lib -->
+        <script src="js/core/angular.min.js"></script>
+        <script src="js/core/angular-route.min.js"></script>
+        <script src="js/core/angular-resource.min.js"></script>
+        <script src="js/core/ng-file-upload-shim.js"></script>
+        <script src="js/core/ng-file-upload.js"></script>
+      
+       <!-- Angular Controller script -->
+        <script src="js/app.js"></script>
+        <script src="component/cart.js"></script>
+        <script src="js/scripts/scrollScript.js"></script>
+      
+    </body>
+</html>

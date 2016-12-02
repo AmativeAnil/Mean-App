@@ -1,0 +1,37 @@
+<div class="container adminOrder">
+    <div ng-controller="orderController">
+        <h1>All Orders</h1>
+        <table class="table table-striped table-bordered">
+            <tr>
+                <th>Name</th>
+                <th>Street</th>
+                <th>Value</th>
+                <th>View Details</th>
+            </tr>
+            <tr ng-repeat="order in orders">
+                <td> {{ order.name }} </td>
+                <td> {{ order.street }} </td>
+                <td> {{ calculateTotal(order) | currency }} </td>
+                <td>
+                    <button ng-click="selectOrder(order)" class="btn btn-xs btn-green">Details</button>
+                </td>
+            </tr>
+        </table>
+        <div ng-show="selectedOrder">
+            <h3>Order Details</h3>
+
+            <table class="table table-striped table-bordered">
+                <tr>
+                    <th>Name</th>
+                    <th>Count</th>
+                    <th>Price</th>
+                </tr>
+                <tr ng-repeat="item in selectedOrder.products">
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.count }}</td>
+                    <td>{{ item.price | currency }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

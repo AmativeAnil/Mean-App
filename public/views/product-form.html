@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row" ng-hide="product._id">
+      <div class="col-md-6">
+          <h2>Create new product</h2>
+      </div>
+    </div>
+
+  <form name="productForm" novalidate>
+      <div class="form-group" >
+          <label for="name">Name:</label>
+          <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name" ng-model="product.name" required>
+          <span style="color:red" ng-show="productForm.name.$dirty && productForm.name.$invalid">
+          <span ng-show="productForm.name.$error.required">Name is required.</span>
+          </span>
+      </div>
+      
+      <div class="form-group" >
+          <label for="price">Price:</label>
+          <input type="text" class="form-control" id="price" placeholder="Enter Price" name="price" ng-model="product.price" required>
+          <span style="color:red" ng-show="productForm.price.$dirty && productForm.price.$invalid">
+          <span ng-show="productForm.price.$error.required">Price is required.</span>
+          </span>
+      </div>
+      
+      <div class="form-group" >
+          <label for="desc">Description:</label>
+          <input type="text" class="form-control" id="desc" placeholder="Enter Description" name="desc" ng-model="product.desc" required>
+          <span style="color:red" ng-show="productForm.desc.$dirty && productForm.desc.$invalid">
+          <span ng-show="productForm.desc.$error.required">Description is required.</span>
+          </span>
+      </div>
+      
+      <button style="margin-top:20px" class="btn btn-default" ng-disabled="!productForm.$valid" ng-click="saveproduct(product)">Save</button>
+      <button style="margin-top:20px" class="btn btn-default" ng-click="back()">Back</button>
+  </form>
+</div>

@@ -1,0 +1,30 @@
+<div class="container adminOrder">
+    <div ng-hide="editMode">
+      <div>
+        <div>
+            <div class="row">
+                 <div class="col-md-6">
+                    <img ng-src="../images/uploads/{{product.name}}.jpg" width="200px" height="200px" alt="flower_images">
+                 </div>
+                 <div class="col-md-6">
+                    <h3>{{ product.name }}</h3>
+                    <p>{{product.desc}}</p>
+                    <p>Price: {{product.price |currency}}</p>
+                 </div>
+             </div>
+        </div>
+          <div class="col-md-6">
+          </div>
+          <div class="col-md-6">
+            <p>
+              <button style="margin-top:20px" class="btn btn-green" ng-click="toggleEdit()">Edit</button>
+                <a href="#/admin"><button style="margin-top:20px" class="btn btn-green" ng-click="deleteproduct(product._id)">Delete</button></a>
+              <a style="margin-top:20px" class="btn btn-green" href="#/admin">Back</a>
+            </p>
+        </div>
+      </div>
+    </div>
+
+    <div ng-include="productFormUrl">
+    </div>
+</div>

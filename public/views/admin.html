@@ -1,0 +1,45 @@
+<div class="container">
+    <div class = "row">
+      <div class="col-md-6">
+        <h2>
+          products
+        </h2>
+      </div>
+      <div class="col-md-3">
+          <a style="margin-top:20px" class="btn btn-green" href="#/new/product">ADD New Product</a>
+      </div>
+      <div class="col-md-3">
+        <a style="margin-top:20px" class="btn btn-green" href="#/adminOrders">View Orders</a>
+      </div>
+    </div>
+    <div class="container">
+        <table class="table table-hover table-stripped">
+            <thead>
+                <tr>
+                    <th>name</th>
+                    <th>price</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="product in productlist | orderBy:'createDate'" style="cursor:pointer">
+                    <td>
+                        <a ng-href="#/product/{{product._id}}">{{ product.name }}</a>
+                    </td>
+                    <td>
+                        {{ product.price }}
+                    </td>
+                    <td>
+                        {{ product.desc | limitTo : 20 }}<span ng-if="product.desc.length > 20">...</span>
+                    </td>
+                    <td>
+                        <a class="btn btn-info" href="#/product/{{product._id}}">View</a>
+                    </td>
+                    <td>
+                        <a href="#/admin"><button class="btn btn-danger" ng-click="deleteproduct(product._id)">Delete</button></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
