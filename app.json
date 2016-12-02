@@ -1,0 +1,8 @@
+{
+  "name": "MEAN",
+  "description": "A MEAN app.",
+  "repository": "",
+  "logo": "",
+  "keywords": ["node", "express", "angular", "MEAN", "mongodb", "REST", "API"],
+  "addons": ["mongolab"]
+}
