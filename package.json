@@ -6,7 +6,7 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
-    "mongodb": "^2.2.12",
+    "mongodb": ">=3.1.13",
     "multer": "^1.2.0",
     "ng-file-upload": "^12.2.13",
     "path": "^0.12.7"
